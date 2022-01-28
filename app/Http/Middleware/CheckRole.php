@@ -23,7 +23,7 @@ class CheckRole
             if(str_contains($request->url(),'/forgot-password') || str_contains($request->url(),'/reset-password'))
             {
                 
-                return redirect('/');
+                return redirect('/admin');
             }
 
             if(!str_contains($request->url(),'/logout') && !str_contains($request->url(),'/livewire'))
@@ -39,7 +39,7 @@ class CheckRole
                 }
                 if(Auth::user()->hasRole('customer')) {
                     if(str_contains($request->url(),'/admin')) {
-                        return redirect('/');
+                        return redirect('/admin');
                     }
 
                 }
