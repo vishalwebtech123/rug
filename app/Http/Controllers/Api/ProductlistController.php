@@ -12,7 +12,7 @@ class ProductlistController extends Controller
 {
     public function getAllProducts() {
       $product = Product::get()->toJson(JSON_PRETTY_PRINT);
-      return response($product, 200);
+      return response($product, 200); 
     }
 
     public function getIndividualProduct($id) {
